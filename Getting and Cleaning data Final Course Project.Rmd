@@ -60,3 +60,6 @@ dim(xDataSet_merged)
 dim(yDataSet_merged)
 dim(subjectDataSet_merged)
 ```
+
+--------------------------------------------------------------------------------
+3. The next operation is to load the feature and activity Info, this can be considered as a sub operation to step 2 but I'm just giving it under a separate point.
