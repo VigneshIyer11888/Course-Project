@@ -37,3 +37,16 @@ dim(subjectDataSet_merged)
 # 3. The next operation is to load the feature and activity Info, this can
 # be considered as a sub operation to step 2 but I'm just giving it under a
 # separate point.
+
+
+#activity Information
+activityNames <- read.table(
+  file.path("../Course Project/UCIHARDataset/UCI HAR Dataset", 
+            "activity_labels.txt"),
+            head=FALSE)
+
+# Feature Information
+featuresNames <- read.table(
+  file.path("../Course Project/UCIHARDataset/UCI HAR Dataset", 
+            "features.txt"),
+            head=FALSE)
