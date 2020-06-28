@@ -14,6 +14,7 @@ unzip(zipfile = "../Course Project/UCIHARDataset.zip", exdir = "./UCIHARDataset"
 # You would need to set the working directory using the setwd() to the 
 # folder containing the datasets as we would need to perform operations 
 # on these datasets.
+
 setwd("C:/Users/My Pc/Documents/GitHub/Course Project/UCIHARDataset/UCI HAR Dataset")
 library(plyr)
 library(data.table)
@@ -25,7 +26,14 @@ subjectTest_data = read.table('./test/subject_test.txt',header=FALSE)
 xTest_data = read.table('./test/x_test.txt',header=FALSE)
 yTest_data = read.table('./test/y_test.txt',header=FALSE)
 
-xDataSet <- rbind(xTrain_data, xTest_data)
-yDataSet <- rbind(yTrain_data, yTest_data)
-subjectDataSet <- rbind(subjectTrain_data, subjectTest_data)
-dim(xDataSet)
+xDataSet_merged <- rbind(xTrain_data, xTest_data)
+yDataSet_merged <- rbind(yTrain_data, yTest_data)
+subjectDataSet_merged <- rbind(subjectTrain_data, subjectTest_data)
+
+dim(xDataSet_merged)
+dim(yDataSet_merged)
+dim(subjectDataSet_merged)
+
+# 3. The next operation is to load the feature and activity Info, this can
+# be considered as a sub operation to step 2 but I'm just giving it under a
+# separate point.
