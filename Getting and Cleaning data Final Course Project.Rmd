@@ -52,11 +52,11 @@ subjectTest_data = read.table('./test/subject_test.txt',header=FALSE)
 xTest_data = read.table('./test/x_test.txt',header=FALSE)
 yTest_data = read.table('./test/y_test.txt',header=FALSE)
 
-xDataSet <- rbind(xTrain_data, xTest_data)
-yDataSet <- rbind(yTrain_data, yTest_data)
-subjectDataSet <- rbind(subjectTrain_data, subjectTest_data)
+xDataSet_merged <- rbind(xTrain_data, xTest_data)
+yDataSet_merged <- rbind(yTrain_data, yTest_data)
+subjectDataSet_merged <- rbind(subjectTrain_data, subjectTest_data)
 
-dim(xDataSet)
-dim(yDataSet)
-dim(subjectDataSet)
+dim(xDataSet_merged)
+dim(yDataSet_merged)
+dim(subjectDataSet_merged)
 ```
