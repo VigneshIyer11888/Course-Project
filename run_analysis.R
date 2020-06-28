@@ -14,7 +14,7 @@ unzip(zipfile = "../Course Project/UCIHARDataset.zip", exdir = "./UCIHARDataset"
 # You would need to set the working directory using the setwd() to the 
 # folder containing the datasets as we would need to perform operations 
 # on these datasets.
-# setwd("C:/Users/My Pc/Documents/GitHub/Course Project/UCIHARDataset/UCI HAR Dataset")
+setwd("C:/Users/My Pc/Documents/GitHub/Course Project/UCIHARDataset/UCI HAR Dataset")
 library(plyr)
 library(data.table)
 subjectTrain_data = read.table('./train/subject_train.txt',header=FALSE)

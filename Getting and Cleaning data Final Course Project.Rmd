@@ -41,6 +41,7 @@ unzip(zipfile = "../Course Project/UCIHARDataset.zip", exdir = "./UCIHARDataset"
 (In the following the word data means both train and test). The x_data.txt, y_data.txt, subject_data.txt should be binded by row.
 
 ```{r merging data sets}
+setwd("C:/Users/My Pc/Documents/GitHub/Course Project/UCIHARDataset/UCI HAR Dataset")
 library(plyr)
 library(data.table)
 subjectTrain_data = read.table('./train/subject_train.txt',header=FALSE)
