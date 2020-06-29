@@ -40,11 +40,12 @@ dim(subjectDataSet_merged)
 
 
 #activity Information
-activityNames <- read.table(file.path("../Course Project/UCIHARDataset/UCI HAR Dataset", "activity_labels.txt"),head=FALSE)
+activityNames <- read.table(
+  file.path("C:/Users/My Pc/Documents/GitHub/Course Project/UCIHARDataset/UCI HAR Dataset", "activity_labels.txt"),head=FALSE)
 str(activityNames)
 
 # Feature Information
-featuresNames <- read.table(file.path("../Course Project/UCIHARDataset/UCI HAR Dataset", "features.txt"),head=FALSE)
+featuresNames <- read.table(file.path("C:/Users/My Pc/Documents/GitHub/Course Project/UCIHARDataset/UCI HAR Dataset", "features.txt"),head=FALSE)
 str(featuresNames)
 
 # 4.Extract only the measurements on the mean and standard deviation for each
@@ -56,6 +57,7 @@ View(xDataSetmean_std)
 dim(xDataSetmean_std)
 
 # 5.Use descriptive activity names to name the activities in the data set.
+
 yDataSet_merged[, 1] <- read.table("activity_labels.txt")[yDataSet_merged[, 1], 2]
 names(yDataSet_merged) <- "Activity"
 View(yDataSet_merged)
@@ -64,7 +66,7 @@ names(subjectDataSet_merged) <- "Subject"
 summary(subjectDataSet_merged)
 
 # Combining all the data sets into one using cbind() function.
-fullDataSet <- cbind(xDataSet_mean_std, yDataSet_merged, subjectDataSet_merged)
+fullDataSet <- cbind(xDataSetmean_std, yDataSet_merged, subjectDataSet_merged)
 
 # Fetching combined dataset
 names(fullDataSet)
@@ -79,3 +81,4 @@ names(fullDataSet) <- gsub("Mag", "Magnitude", names(fullDataSet))
 names(fullDataSet) <- gsub("mean", "Mean", names(fullDataSet))
 names(fullDataSet) <- gsub("std", "Standard", names(fullDataSet))
 names(fullDataSet)
+
