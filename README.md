@@ -32,3 +32,5 @@ You will be required to submit:
     
     3. The next operation is to load the feature and activity Info, this can
     be considered as a sub operation to step 2 but I'm just giving it under         a separate point.
+
+    4.
