@@ -99,3 +99,4 @@ summary(subjectDataSet_merged)
 # Combining all the data sets into one using cbind.
 fullDataSet <- cbind(xDataSet_mean_std, yDataSet_merged, subjectDataSet_merged)
 
+```

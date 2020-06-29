@@ -30,7 +30,8 @@ You will be required to submit:
     folder containing the datasets as we would need to perform operations
     on these datasets.
     
-    3. The next operation is to load the feature and activity Info, this can
+        1. The next operation is to load the feature and activity Info, this can
     be considered as a sub operation to step 2 but I'm just giving it under         a separate point.
 
-    4.
+        2. Extract only the measurements on the mean and standard deviation for      each.
+    measurement.
