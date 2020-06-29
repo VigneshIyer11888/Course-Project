@@ -20,7 +20,7 @@ Create one R script called run_analysis.R that does the following.
 
 ## Dataset classification and description
 
-1. This script makes use of data present in x_train.txt, x_test.txt, y_train.txt, y_test.txt, subject_train.txt and subject_test.txt, they can all be found inside the downloaded dataset, namely URI HAR Dataset.
+1. The run_analysis.R script makes use of data present in x_train.txt, x_test.txt, y_train.txt, y_test.txt, subject_train.txt and subject_test.txt, they can all be found inside the downloaded dataset, namely URI HAR Dataset.
 
 2. The features.txt contains the correct variable name, which corresponds to each column of x_train.txt, x_test.txt, y_train.txt, y_test.txt. Further feature mapping is stated features_info.txt.
 
