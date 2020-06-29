@@ -27,7 +27,7 @@ You should create one R script called run_analysis.R that does the following.
 5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 -------------------------------------------------------------------------------
-1. Fetching dataset from the Web and unzipping the file to a destination directory
+# 1. Fetching dataset from the Web and unzipping the file to a destination directory
 ```{r fetchData}
 if(!(file.exists("../Course Project"))){
   dir.create("../Course Project")
@@ -37,9 +37,8 @@ download.file(datafile, destfile = "../Course Project/UCIHARDataset.zip")
 unzip(zipfile = "../Course Project/UCIHARDataset.zip", exdir = "./UCIHARDataset")
 ```
 
---------------------------------------------------------------------------------
-2. Merging data from the train and the test datasets to create one data set
-(In the following the word data means both train and test). The x_data.txt, y_data.txt, subject_data.txt should be binded by row.
+-------------------------------------------------------------------------------
+# 2. Merging data from the train and the test datasets to create one data set  (In the following the word data means both train and test). The x_data.txt, y_data.txt, subject_data.txt should be binded by row.
 
 ```{r merging data sets}
 setwd("C:/Users/My Pc/Documents/GitHub/Course Project/UCIHARDataset/UCI HAR Dataset")
@@ -62,8 +61,8 @@ dim(yDataSet_merged)
 dim(subjectDataSet_merged)
 ```
 
---------------------------------------------------------------------------------
-3. The next operation is to load the feature and activity Info, this can be considered as a sub operation to step 2 but I'm just giving it under a separate point.
+-------------------------------------------------------------------------------
+# 3. The next operation is to load the feature and activity Info, this can be considered as a sub operation to step 2 but I'm just giving it under a separate point.
 ```{r loading feature and activity info}
 
 #activity Information
