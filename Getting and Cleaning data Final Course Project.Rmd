@@ -38,7 +38,8 @@ unzip(zipfile = "../Course Project/UCIHARDataset.zip", exdir = "./UCIHARDataset"
 ```
 
 -------------------------------------------------------------------------------
-# 2. Merging data from the train and the test datasets to create one data set  (In the following the word data means both train and test). The x_data.txt, y_data.txt, subject_data.txt should be binded by row.
+# 2. Merging data from the train and the test datasets to create one data set
+# (In the following the word data means both train and test). The x_data.txt, y_data.txt, subject_data.txt should be binded by row.
 
 ```{r merging data sets}
 setwd("C:/Users/My Pc/Documents/GitHub/Course Project/UCIHARDataset/UCI HAR Dataset")
