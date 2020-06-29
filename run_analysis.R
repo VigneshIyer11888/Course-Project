@@ -40,13 +40,9 @@ dim(subjectDataSet_merged)
 
 
 #activity Information
-activityNames <- read.table(
-  file.path("../Course Project/UCIHARDataset/UCI HAR Dataset", 
-            "activity_labels.txt"),
-            head=FALSE)
+activityNames <- read.table(file.path("../Course Project/UCIHARDataset/UCI HAR Dataset", "activity_labels.txt"),head=FALSE)
+str(activityNames)
 
 # Feature Information
-featuresNames <- read.table(
-  file.path("../Course Project/UCIHARDataset/UCI HAR Dataset", 
-            "features.txt"),
-            head=FALSE)
+featuresNames <- read.table(file.path("../Course Project/UCIHARDataset/UCI HAR Dataset", "features.txt"),head=FALSE)
+str(featuresNames)
