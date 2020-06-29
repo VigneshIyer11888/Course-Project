@@ -63,7 +63,19 @@ View(yDataSet_merged)
 names(subjectDataSet_merged) <- "Subject"
 summary(subjectDataSet_merged)
 
-# Combining all the data sets into one using cbind.
+# Combining all the data sets into one using cbind() function.
 fullDataSet <- cbind(xDataSet_mean_std, yDataSet_merged, subjectDataSet_merged)
 
+# Fetching combined dataset
+names(fullDataSet)
 
+# Setting descriptive names and verifying it.
+names(fullDataSet) <- gsub("^t", "Time", names(fullDataSet))
+names(fullDataSet) <- gsub("^f", "Frequency", names(fullDataSet))
+names(fullDataSet) <- gsub("Acc", "Accelerometer", names(fullDataSet))
+names(fullDataSet) <- gsub("BodyBody", "Body", names(fullDataSet))
+names(fullDataSet) <- gsub("Gyro", "Gyrometer", names(fullDataSet))
+names(fullDataSet) <- gsub("Mag", "Magnitude", names(fullDataSet))
+names(fullDataSet) <- gsub("mean", "Mean", names(fullDataSet))
+names(fullDataSet) <- gsub("std", "Standard", names(fullDataSet))
+names(fullDataSet)
