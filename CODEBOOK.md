@@ -25,6 +25,7 @@ Create one R script called run_analysis.R that does the following.
 2.The features.txt contains the correct variable name, which corresponds to each column of x_train.txt, x_test.txt, y_train.txt, y_test.txt. Further feature mapping is stated features_info.txt.
 
 3.The activity_labels.txt contains the desciptive names for each activity label.
+The descriptions of these activity labels need to be modified as a part of the script
 
 4.The README.txt is the overall desciption about the overall process of how publishers of this dataset did the experiment and got the data result.
 
