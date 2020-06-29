@@ -38,7 +38,7 @@ unzip(zipfile = "../Course Project/UCIHARDataset.zip", exdir = "./UCIHARDataset"
 ```
 
 -------------------------------------------------------------------------------
-# 2. Merging data from the train and the test datasets to create one data set
+# Merging data from the train and the test datasets to create one data set
 # (In the following the word data means both train and test). The x_data.txt, y_data.txt, subject_data.txt should be binded by row.
 
 ```{r merging data sets}
@@ -65,7 +65,7 @@ dim(subjectDataSet_merged)
 ```
 
 -------------------------------------------------------------------------------
-# 3. The next operation is to load the feature and activity Info, this can be considered as a sub operation to step 2 but I'm just giving it under a separate point.
+# 2. The next operation is to load the feature and activity Info, this can be considered as a sub operation to step 2 but I'm just giving it under a separate point.
 ```{r loading feature and activity info}
 
 
@@ -81,7 +81,7 @@ str(featuresNames)
 
 ```
 
-# 4.Extract only the measurements on the mean and standard deviation for each
+# 3.Extract only the measurements on the mean and standard deviation for each
 # measurement.
 
 ```{r Calculate mean and standard deviation}
@@ -93,10 +93,9 @@ dim(xDataSetmean_std)
 
 ```
 
-# 5.Setting descriptive activity names to name the activities in the data set.
+# 4.Setting descriptive activity names to name the activities in the data set.
 
 ```{r Setting descriptive activity names to the activity data set}
-# 5.Use descriptive activity names to name the activities in the data set.
 
 yDataSet_merged[, 1] <- read.table("activity_labels.txt")[yDataSet_merged[, 1], 2]
 names(yDataSet_merged) <- "Activity"
@@ -122,3 +121,13 @@ names(fullDataSet) <- gsub("mean", "Mean", names(fullDataSet))
 names(fullDataSet) <- gsub("std", "Standard", names(fullDataSet))
 names(fullDataSet)
 ```
+
+# 5 - From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+
+```{r Tidy dataset creation}
+
+fullDataSet$Subject <- as.factor(fullDataSet$Subject)
+fullDataSet <- data.table(fullDataSet)
+tidyData <- aggregate(. ~Subject + Activity, fullDataSet, mean)
+tidyData <- tidyData[order(tidyData$Subject,tidyData$Activity),]
+write.table(tidyData, file = "TidyData.txt", row.names = FALSE)
