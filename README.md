@@ -36,4 +36,5 @@ You will be required to submit:
         
         3. Use descriptive activity names to name the activities in the data               set.
         
-        4. Generate Tidy dataset and save it in a file "TidyData.txt" 
+        4. Generate Tidy dataset and save it in a file "TidyData.txt"
+        
