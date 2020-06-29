@@ -34,10 +34,7 @@ dim(xDataSet_merged)
 dim(yDataSet_merged)
 dim(subjectDataSet_merged)
 
-# 3. The next operation is to load the feature and activity Info, this can
-# be considered as a sub operation to step 2 but I'm just giving it under a
-# separate point.
-
+# The next operation is to load the feature and activity Info.
 
 #activity Information
 activityNames <- read.table(
@@ -48,7 +45,7 @@ str(activityNames)
 featuresNames <- read.table(file.path("C:/Users/My Pc/Documents/GitHub/Course Project/UCIHARDataset/UCI HAR Dataset", "features.txt"),head=FALSE)
 str(featuresNames)
 
-# 4.Extract only the measurements on the mean and standard deviation for each
+# 3.Extract only the measurements on the mean and standard deviation for each
 # measurement.
 
 xDataSetmean_std <- xDataSet_merged[, grep("-(mean|std)\\(\\)", read.table("features.txt")[, 2])]
@@ -56,7 +53,7 @@ names(xDataSetmean_std) <- read.table("features.txt")[grep("-(mean|std)\\(\\)", 
 View(xDataSetmean_std)
 dim(xDataSetmean_std)
 
-# 5.Use descriptive activity names to name the activities in the data set.
+# 4.Use descriptive activity names to name the activities in the data set.
 
 yDataSet_merged[, 1] <- read.table("activity_labels.txt")[yDataSet_merged[, 1], 2]
 names(yDataSet_merged) <- "Activity"

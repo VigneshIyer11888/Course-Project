@@ -32,4 +32,8 @@ You will be required to submit:
     
         1. The next operation is to load the feature and activity Info.
 
-        2. Extract only the measurements on the mean and standard deviation for          each measurement.
+        2. Extract only the measurements on the mean and standard deviation for            each measurement.
+        
+        3. Use descriptive activity names to name the activities in the data               set.
+        
+        4. Generate Tidy dataset and save it in a file "TidyData.txt" 
